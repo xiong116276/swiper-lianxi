@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1.0"/>
+    <title>swiper 轮播插件练习</title>
+    <link rel="stylesheet" href="css/swiper-3.4.2.min.css">
+    <style>
+        img{
+            max-width:100%;
+        }
+        #lunbo{
+            width:500px;
+            margin:50px auto;
+        }
+        .btn{
+            color:#6a737d;
+        }
+    </style>
+</head>
+<body>
+<div id="lunbo">
+    <div class="swiper-container">
+        <!--轮播图-->
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <img src="img/img/1.jpg" alt="">
+            </div>
+            <div class="swiper-slide">
+                <img src="img/img/2.jpg" alt="">
+            </div>
+            <div class="swiper-slide">
+                <img src="img/img/3.jpg" alt="">
+            </div>
+        </div>
+        <!--前后按钮-->
+        <div class="swiper-button-prev swiper-button-white btn"></div>
+        <div class="swiper-button-next swiper-button-white btn"></div>
+        <!-- 分页器 （导航小圆点）-->
+        <div class="swiper-pagination "></div>
+    </div>
+</div>
+
+<script src="js/swiper-3.4.2.min.js"></script>
+<script>
+    var mySwiper = new Swiper('.swiper-container', {
+//        width:800,
+//        height:500,
+        autoplay: 3000,//可选选项，自动滑动
+        speed:2000,//速度
+        direction:'horizontal',//滑动的方向horizontal水平或者vertical垂直
+        autoplayDisableOnInteraction:false,//用户操作swiper之后，是否禁止autoplay。默认为true：停止。
+        grabCursor:true,//设置为true时，鼠标覆盖Swiper时指针会变成手掌形状，拖动时指针会变成抓手形状。
+        nextButton: '.swiper-button-next',
+        prevButton: '.swiper-button-prev',
+        effect:"slider",//切换效果默认：slide、 fade淡出、cube 3D、coverflow、flip
+        pagination : '.swiper-pagination',//分页器
+        loop:true,//首尾衔接循环
+    })
+</script>
+</body>
+</html>
